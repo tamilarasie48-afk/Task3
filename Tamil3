@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .product {
+            display: flex;
+            gap: 30px;
+        }
+
+        .product img {
+            width: 350px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .details h1 {
+            margin: 0;
+        }
+
+        .price {
+            color: #e63946;
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #1d3557;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #457b9d;
+        }
+
+        .controls button {
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .reviews {
+            margin-top: 40px;
+        }
+
+        .review {
+            background: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="product">
+        <div>
+            <img id="productImage" src="https://via.placeholder.com/350?text=View+1" alt="Product Image">
+            <div class="controls">
+                <button onclick="changeImage(1)">View 1</button>
+                <button onclick="changeImage(2)">View 2</button>
+                <button onclick="changeImage(3)">View 3</button>
+            </div>
+        </div>
+
+        <div class="details">
+            <h1>Smart Headphones</h1>
+            <p class="price">₹2,999</p>
+            <p>High-quality wireless headphones with noise cancellation and deep bass.</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h2>Customer Reviews</h2>
+
+        <div class="review">
+            ⭐⭐⭐⭐⭐  
+            <p>Excellent sound quality and battery life!</p>
+            <small>- Rahul</small>
+        </div>
+
+        <div class="review">
+            ⭐⭐⭐⭐  
+            <p>Very comfortable and stylish.</p>
+            <small>- Priya</small>
+        </div>
+
+        <div class="review">
+            ⭐⭐⭐⭐⭐  
+            <p>Best headphones for this price.</p>
+            <small>- Arun</small>
+        </div>
+    </div>
+</div>
+
+<script>
+    function changeImage(view) {
+        const image = document.getElementById("productImage");
+        image.src = `https://via.placeholder.com/350?text=View+${view}`;
+    }
+</script>
+
+</body>
+</html>
